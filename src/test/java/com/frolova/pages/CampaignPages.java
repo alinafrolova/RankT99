@@ -26,7 +26,7 @@ import static org.junit.Assert.assertFalse;
 //@DefaultUrl("https://registration.grosvenorcasinos.com/WN/P1/Details/2?t=DBEA48EFB96D4A4F8BA96DE7F8")
 @NamedUrls(
         {
-                @NamedUrl(name = "chanel", url = "http://www.grosvenorcasinos.com/{1}?mmcore.opc.enabled=1")
+                @NamedUrl(name = "chanel", url = "http://www.grosvenorcasinos.com/{1}")
 
         }
 )
@@ -156,7 +156,13 @@ public class CampaignPages extends PageObject {
     /////////////////////////////////
     @FindBy(id = "termscheck")
     private WebElementFacade terms ;
-    /////////////////////////////////???
+    /////////////////////////////////frame
+    @FindBy (id = "mm_t99_popup")
+    private WebElementFacade frame;
+    /////////////////////////////////close frame
+    @FindBy (id = "mm_t99_popup")
+    private WebElementFacade btn_close_frame;
+    /////////////////////////////////
     @FindBy (id = "accoptions")
     private WebElementFacade panel_logged_in;
     /////////////////////////////////
@@ -335,6 +341,44 @@ public class CampaignPages extends PageObject {
         checkbox_clublogin.click();
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
+    public void see_frame(){
+
+        frame.isPresent();
+        boolean wait_submit,wait_continue;
+        wait_submit= btn_close_frame.isPresent();
+        getDriver().manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+        try {
+            Thread.sleep(3000);
+            while (wait_submit=false)
+            {
+                wait_submit= btn_close_frame.isDisplayed();
+                System.out.println(wait_submit);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        getDriver().switchTo().frame("mm_t99_reg_frame");
+        wait_continue= btn_continue.isDisplayed();
+        getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        try {
+            Thread.sleep(3000);
+            while (wait_continue=false)
+            {
+                wait_continue= btn_continue.isDisplayed();
+                System.out.println(wait_continue);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        btn_close_frame.click();
+
+        String chc_newl = getDriver().findElement(By.cssSelector("h2")).getAttribute("src");
+        System.out.println(chc_newl);
+        assertEquals(chc_newl, "//service.maxymiser.net/cm/images-eu/1/1/1/3AA8C16822B3302F9060E02F5F86B75A149161E570BDACAE986A6255951B3A7A/grosvenorcasinos-com/T99-Registration-AB/pre_reg_header_text.png");
+
+
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////
     public void fill_membership(String membership){
         membership_field.isPresent();
         boolean  actual;
@@ -371,16 +415,42 @@ public class CampaignPages extends PageObject {
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void btn_continue(){
         boolean wait_submit;
+        wait_submit= btn_continue.isPresent();
+        getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        waitFor(btn_continue);
         btn_continue.isPresent();
         btn_continue.click();
         waitForWithRefresh();
         withTimeoutOf(5, TimeUnit.SECONDS).elementIsDisplayed(By.tagName("h2"));
-        wait_submit= btn_continue.isPresent();
+
         while (wait_submit=false)
         {
             wait_submit= btn_continue.isDisplayed();
             System.out.println(wait_submit);
         }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void btn_continue_a2(){
+        boolean wait_submit;
+        wait_submit= btn_continue.isPresent();
+        getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        try {
+            Thread.sleep(3000);
+            while (wait_submit=false)
+            {
+                wait_submit= btn_continue.isDisplayed();
+                System.out.println(wait_submit);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        btn_continue.isPresent();
+        btn_continue.click();
+        waitForWithRefresh();
+        withTimeoutOf(5, TimeUnit.SECONDS).elementIsDisplayed(By.tagName("h2"));
+
+
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void title (String title){

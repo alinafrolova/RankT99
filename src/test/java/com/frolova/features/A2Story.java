@@ -24,23 +24,21 @@ public class A2Story {
 
     @Steps
     AdminSteps adminSteps;
-  /*  @Before
-     @WithDriver("chrome")
-    public void a_work_with_admin(){
-
-        adminSteps.openAdmin();
-        adminSteps.loginAdmin();
-        adminSteps.clearAdmin();
-
-    }*/
+//    @Before
+//     @WithDriver("chrome")
+//    public void a_work_with_admin(){
+//
+//        adminSteps.openAdmin();
+//        adminSteps.loginAdmin();
+//        adminSteps.clearAdmin();
+//
+//    }
     @Test
-    @WithDriver("chrome")
+    @WithDriver("iexplorer")
     public void work_with_campaign_poker_main_click_btn(){
-        adminSteps.openAdmin();
-        adminSteps.loginAdmin();
-        adminSteps.clearAdmin();
+
         campaignSteps.openSiteMain(new String[] {"live-casino"});
         campaignSteps.click_main_btn_join();
-        campaignSteps.fillDefaultStep();
+        campaignSteps.fillA2Step();
     }
 }

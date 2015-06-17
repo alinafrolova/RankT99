@@ -28,12 +28,12 @@ public class CampaignSteps extends ScenarioSteps {
     private Cookie mmcore;
     private static final org.apache.log4j.Logger log = Logger.getLogger(CampaignSteps.class);
     static {
-        DOMConfigurator.configureAndWatch("F:\\Selenium\\Rank\\RankT99\\RankT99", 1000);
+        DOMConfigurator.configureAndWatch("D:\\Selenium\\Tests\\Rank\\RankT99", 1000);
     }
     @Step
     //////////////////////////////////////////////////////////////////////////////////////////
     public void openSiteMain(String[] url){
-//        getDriver().manage().window().maximize();
+        getDriver().manage().window().maximize();
         campaignPages.open("chanel", url);
         campaignPages.addCookies();
 
@@ -144,10 +144,13 @@ public class CampaignSteps extends ScenarioSteps {
         campaignPages.submit();
 
     }
+    ///////////////////////////////////////////////////////////
     @Step
-    public void TestStep(){
-
-
+    public void fillA2Step(){
+        log.info("Это информационное сообщение!");
+        campaignPages.see_frame();
+        campaignPages.choose_new_login();
+        campaignPages.btn_continue_a2();
         campaignPages.title("Mr");
         campaignPages.firstname(name);
         campaignPages.lastname(name);

@@ -27,6 +27,6 @@ public class TestStory {
 
         campaignSteps.openTest(new String[] {"live-casino"});
 
-        campaignSteps.TestStep();
+
     }
 }
