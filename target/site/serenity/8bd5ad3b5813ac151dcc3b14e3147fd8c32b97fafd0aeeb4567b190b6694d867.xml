@@ -1,0 +1,73 @@
+<acceptance-test-run title="B work with campaign" name="b_work_with_campaign" steps="19" successful="4" failures="0" errors="1" skipped="14" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="278270" timestamp="2015-06-11T10:43:47.058+03:00">
+  <user-story id="com.frolova.features.A4_NoSSN_3StepStory" name="A4  no ssn 3 step story" path="com.frolova.features"/>
+  <tags>
+    <tag name="A4  no ssn 3 step story" type="story"/>
+    <tag name="A4 no ssn 3 step story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="14046">
+    <description>Open site</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1216">
+    <description>Should see title page: &lt;span class=&apos;step-parameter&apos;&gt;First Step, ÖPPNA KONTO HOS SVERIGES SNABBASTE CASINO&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="248621">
+    <description>Fill first a4 step</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="5411">
+    <description>Should see title page: &lt;span class=&apos;step-parameter&apos;&gt;First Step, ÖPPNA KONTO HOS SVERIGES SNABBASTE CASINO&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="ERROR" duration="2952">
+    <description>Fill twot a4 step</description>
+    <error>Timed out after 2 seconds. Element not available
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown</error>
+    <exception>org.openqa.selenium.ElementNotVisibleException:Timed out after 2 seconds. Element not available
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown&#xd;
+[com.frolova.features.A4_NoSSN_3StepStory.b_work_with_campaign(A4_NoSSN_3StepStory.java:54)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="5">
+    <description>Should see title page: &lt;span class=&apos;step-parameter&apos;&gt;First Step, ÖPPNA KONTO HOS SVERIGES SNABBASTE CASINO&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="5535">
+    <description>Fill threet a4 step</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="86">
+    <description>Open page for deposit</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="89">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="167">
+    <description>Settings weight all</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Open action log</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Campaign- , T12a_3_Step_Reg_Sweden&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Content- , a_page=a4_nossn_3step;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepone=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_steptwo=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepthree=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_registration=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_firstdeposit=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="59">
+    <description>Clear admin</description>
+  </test-step>
+</acceptance-test-run>

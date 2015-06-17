@@ -1,0 +1,27 @@
+<acceptance-test-run title="Work with admin" name="work_with_admin" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="17364" timestamp="2015-05-19T14:18:14.859+03:00">
+  <user-story id="com.frolova.features.A2_NoSSN_1StepStory" name="A2  no ssn 1 step story" path="com.frolova.features"/>
+  <tags>
+    <tag name="A2  no ssn 1 step story" type="story"/>
+    <tag name="A2 no ssn 1 step story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="3415">
+    <screenshots>
+      <screenshot image="b425e1c9ae6141c865af56d6b014ad8c_NONE.png"/>
+      <screenshot image="c8c69e8ab9ad7daeedb604975660038b_NONE.png"/>
+    </screenshots>
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="12931">
+    <screenshots>
+      <screenshot image="ce91b660b6418123667e2054ffa9020f_NONE.png"/>
+    </screenshots>
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1001">
+    <screenshots>
+      <screenshot image="be39cfa67104b2a7bf5916bb69b7ded0_NONE.png"/>
+      <screenshot image="a95478ec06d2b92fdaae3bbd6d421335_NONE.png"/>
+    </screenshots>
+    <description>Clear admin</description>
+  </test-step>
+</acceptance-test-run>

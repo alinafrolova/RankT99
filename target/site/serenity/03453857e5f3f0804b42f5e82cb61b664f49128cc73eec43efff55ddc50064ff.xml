@@ -1,0 +1,34 @@
+<acceptance-test-run title="Work with admin" name="work_with_admin" steps="3" successful="2" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="13490" timestamp="2015-05-13T15:05:32.308+03:00">
+  <user-story id="com.frolova.features.campaign.AdminStory" name="Admin story" path="com.frolova.features.campaign"/>
+  <tags>
+    <tag name="Campaign" type="feature"/>
+    <tag name="Admin story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="4865">
+    <screenshots>
+      <screenshot image="c8c69e8ab9ad7daeedb604975660038b_NONE.png"/>
+    </screenshots>
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1354">
+    <screenshots>
+      <screenshot image="ca8a5f7b53aaf446b6dde63f3836952d_NONE.png"/>
+    </screenshots>
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="ERROR" duration="7225">
+    <screenshots>
+      <screenshot image="ca8a5f7b53aaf446b6dde63f3836952d_NONE.png"/>
+    </screenshots>
+    <description>Clear admin</description>
+    <error>Expected enabled element was not enabled
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown</error>
+    <exception>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException:Expected enabled element was not enabled
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown&#xd;
+[com.frolova.features.campaign.AdminStory.work_with_admin(AdminStory.java:31)]</exception>
+  </test-step>
+</acceptance-test-run>

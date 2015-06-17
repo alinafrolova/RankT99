@@ -1,0 +1,65 @@
+<acceptance-test-run title="C find actiona in action log" name="c_find_actiona_in_action_log" steps="16" successful="1" failures="0" errors="1" skipped="14" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="2097" timestamp="2015-06-09T15:46:09.773+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="1976">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="ERROR" duration="19">
+    <description>Login admin</description>
+    <error>Timed out after 2 seconds. Element could not be loaded
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown</error>
+    <exception>org.openqa.selenium.NoSuchElementException:Timed out after 2 seconds. Element could not be loaded
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown&#xd;
+[com.frolova.features.DefaultStory.setUp(DefaultStory.java:39)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="7">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="28">
+    <description>Settings weight default</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="5">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Open action log</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="8">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Campaign- , T12a_3_Step_Reg_Sweden&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Content- , a_page=Default;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepone=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_steptwo=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepthree=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_registration&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_firstdeposit&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="7">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="5">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="16">
+    <description>Settings weight all</description>
+  </test-step>
+</acceptance-test-run>

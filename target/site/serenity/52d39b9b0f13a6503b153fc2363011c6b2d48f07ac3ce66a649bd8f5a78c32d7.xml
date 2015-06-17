@@ -1,0 +1,30 @@
+<acceptance-test-run title="Work with campaign poker main click btn" name="work_with_campaign_poker_main_click_btn" steps="5" successful="4" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="77951" timestamp="2015-06-15T13:09:10.452+03:00">
+  <user-story id="com.frolova.features.A2Story" name="A2 story" path="com.frolova.features"/>
+  <tags>
+    <tag name="A2 story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="34805">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="8579">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="161">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="16981">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{live-casino}&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="ERROR" duration="5311">
+    <description>Fill default step</description>
+    <error>Expected enabled element was not enabled
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Alina&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown</error>
+    <exception>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException:Expected enabled element was not enabled
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Alina&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown&#xd;
+[com.frolova.features.A2Story.work_with_campaign_poker_main_click_btn(A2Story.java:44)]</exception>
+  </test-step>
+</acceptance-test-run>

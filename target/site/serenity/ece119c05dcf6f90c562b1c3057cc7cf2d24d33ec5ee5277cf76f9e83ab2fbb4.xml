@@ -1,0 +1,12 @@
+<acceptance-test-run title="Get credit card" name="get_credit_card" steps="2" successful="2" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="7205" timestamp="2015-06-13T10:40:51.446+03:00">
+  <user-story id="com.frolova.features.CreditCardStory" name="Credit card story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Credit card story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="5661">
+    <description>Open site with credit card</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1494">
+    <description>Generate card</description>
+  </test-step>
+</acceptance-test-run>

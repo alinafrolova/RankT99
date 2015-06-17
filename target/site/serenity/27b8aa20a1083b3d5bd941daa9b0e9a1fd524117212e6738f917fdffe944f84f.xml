@@ -1,0 +1,88 @@
+<acceptance-test-run title="B work with campaign" name="b_work_with_campaign" steps="20" successful="7" failures="0" errors="1" skipped="12" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="35212" timestamp="2015-06-11T10:49:11.486+03:00">
+  <user-story id="com.frolova.features.A2_NoSSN_1StepStory" name="A2  no ssn 1 step story" path="com.frolova.features"/>
+  <tags>
+    <tag name="A2  no ssn 1 step story" type="story"/>
+    <tag name="A2 no ssn 1 step story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="10188">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="6211">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="92">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="10500">
+    <description>Settings weight a2</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1746">
+    <description>Open site with credit card</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="559">
+    <description>Generate card</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4895">
+    <description>Open site</description>
+  </test-step>
+  <test-step result="ERROR" duration="778">
+    <description>Fill secondt step</description>
+    <error>stale element reference: element is not attached to the page document
+  (Session info: chrome=43.0.2357.81)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Session ID: c7493f9b8c84d28db8545d1a884231b9
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Frolova.A\AppData\Local\Temp\scoped_dir4584_8877}, rotatable=false, locationContextEnabled=true, version=43.0.2357.81, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]</error>
+    <exception>org.openqa.selenium.StaleElementReferenceException:stale element reference: element is not attached to the page document
+  (Session info: chrome=43.0.2357.81)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Session ID: c7493f9b8c84d28db8545d1a884231b9
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Frolova.A\AppData\Local\Temp\scoped_dir4584_8877}, rotatable=false, locationContextEnabled=true, version=43.0.2357.81, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]&#xd;
+[com.frolova.features.A2_NoSSN_1StepStory.b_work_with_campaign(A2_NoSSN_1StepStory.java:54)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="74">
+    <description>Open page for deposit</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="13">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="27">
+    <description>Settings weight all</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Open action log</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="14">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Campaign- , T12a_3_Step_Reg_Sweden&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Content- , a_page=a2_nossn_1step;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepone=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="2">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_steptwo=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepthree=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_registration=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_firstdeposit=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="9">
+    <description>Clear admin</description>
+  </test-step>
+</acceptance-test-run>

@@ -1,0 +1,7 @@
+<acceptance-test-run title="Work with admin" name="work_with_admin" steps="0" successful="0" failures="0" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="31" timestamp="2015-05-13T15:04:53.614+03:00">
+  <user-story id="com.frolova.features.campaign.CampaignStory" name="Campaign story" path="com.frolova.features.campaign"/>
+  <tags>
+    <tag name="Campaign" type="feature"/>
+    <tag name="Campaign story" type="story"/>
+  </tags>
+</acceptance-test-run>

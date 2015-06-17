@@ -1,0 +1,12 @@
+<acceptance-test-run title="B work with campaign" name="b_work_with_campaign" steps="2" successful="2" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="40075" timestamp="2015-06-13T12:53:49.105+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="8223">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{Poker}&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="21028">
+    <description>Fill default step</description>
+  </test-step>
+</acceptance-test-run>

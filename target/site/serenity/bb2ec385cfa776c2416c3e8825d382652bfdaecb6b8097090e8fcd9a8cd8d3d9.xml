@@ -1,0 +1,33 @@
+<acceptance-test-run title="Generated credit card" name="generated_credit_card" steps="9" successful="9" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="67006" timestamp="2015-06-09T15:44:55.406+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="5001">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="35502">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="93">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="9861">
+    <description>Settings weight default</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1292">
+    <description>Open site with credit card</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="378">
+    <description>Generate card</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="2328">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="87">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="12396">
+    <description>Settings weight all</description>
+  </test-step>
+</acceptance-test-run>

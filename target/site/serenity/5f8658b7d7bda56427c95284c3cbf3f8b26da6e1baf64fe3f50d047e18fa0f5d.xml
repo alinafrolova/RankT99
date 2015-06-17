@@ -1,0 +1,54 @@
+<acceptance-test-run title="Set all" name="setAll" steps="15" successful="5" failures="0" errors="1" skipped="9" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="16811" timestamp="2015-06-09T17:23:30.040+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="5915">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="4671">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="87">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3951">
+    <description>Settings weight default</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1730">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="ERROR" duration="317">
+    <description>Open action log</description>
+    <error>Unspecified failure</error>
+    <exception>java.lang.NullPointerException:null&#xd;
+[com.frolova.features.DefaultStory.setAll(DefaultStory.java:64)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="20">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Campaign- , T12a_3_Step_Reg_Sweden&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Content- , a_page=Default;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepone=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_steptwo=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_stepthree=1,unique;&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_registration&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition: &lt;span class=&apos;step-parameter&apos;&gt;Action- , t12a_firstdeposit&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="11">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="34">
+    <description>Settings weight all</description>
+  </test-step>
+</acceptance-test-run>

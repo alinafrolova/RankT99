@@ -1,0 +1,12 @@
+<acceptance-test-run title="Work with campaign live" name="work_with_campaign_live" steps="2" successful="2" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="34372" timestamp="2015-06-13T13:13:56.988+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="5118">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{live-casino}&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="24031">
+    <description>Fill default step</description>
+  </test-step>
+</acceptance-test-run>

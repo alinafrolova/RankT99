@@ -1,0 +1,24 @@
+<acceptance-test-run title="A work with admin" name="a_work_with_admin" steps="3" successful="0" failures="0" errors="1" skipped="2" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="19927" timestamp="2015-05-19T13:11:42.828+03:00">
+  <user-story id="com.frolova.features.AdminStory" name="Admin story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Admin story" type="story"/>
+  </tags>
+  <test-step result="ERROR" duration="17855">
+    <description>Open admin</description>
+    <error>Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: RemoteWebDriver</error>
+    <exception>org.openqa.selenium.remote.UnreachableBrowserException:Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: RemoteWebDriver&#xd;
+[com.frolova.features.AdminStory.a_work_with_admin(AdminStory.java:28)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="1021">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1009">
+    <description>Clear admin</description>
+  </test-step>
+</acceptance-test-run>

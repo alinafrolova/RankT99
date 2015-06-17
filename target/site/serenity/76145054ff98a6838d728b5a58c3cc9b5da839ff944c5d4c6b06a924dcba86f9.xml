@@ -1,0 +1,30 @@
+<acceptance-test-run title="Work with campaign live click btn play" name="work_with_campaign_live_click_btn_play" steps="1" successful="0" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="54894" timestamp="2015-06-15T12:19:32.376+03:00">
+  <user-story id="com.frolova.features.NotGeneretedDefaultStory" name="Not genereted default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Not genereted default story" type="story"/>
+  </tags>
+  <test-step result="ERROR" duration="54752">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{live-casino}&lt;/span&gt;</description>
+    <error>unknown error: cannot get automation extension
+from timeout: Timed out receiving message from renderer: -18.118
+  (Session info: chrome=43.0.2357.124)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 28.14 seconds
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Alina&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_45&apos;
+Session ID: c14fa39d6d6417e537bb8771530034b5
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=WIN8, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\2447~1\AppData\Local\Temp\scoped_dir7416_30882}, rotatable=false, locationContextEnabled=true, version=43.0.2357.124, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]</error>
+    <exception>org.openqa.selenium.WebDriverException:unknown error: cannot get automation extension
+from timeout: Timed out receiving message from renderer: -18.118
+  (Session info: chrome=43.0.2357.124)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 28.14 seconds
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Alina&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_45&apos;
+Session ID: c14fa39d6d6417e537bb8771530034b5
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=WIN8, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\2447~1\AppData\Local\Temp\scoped_dir7416_30882}, rotatable=false, locationContextEnabled=true, version=43.0.2357.124, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, applicationCacheEnabled=false, takesScreenshot=true}]&#xd;
+[com.frolova.features.NotGeneretedDefaultStory.work_with_campaign_live_click_btn_play(NotGeneretedDefaultStory.java:28)]</exception>
+  </test-step>
+</acceptance-test-run>

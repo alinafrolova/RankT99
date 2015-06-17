@@ -1,0 +1,28 @@
+<acceptance-test-run title="B work with campaign" name="b_work_with_campaign" steps="7" successful="7" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="26803" timestamp="2015-05-14T16:39:11.162+03:00">
+  <user-story id="com.frolova.features.A4_NoSSN_3Step" name="A4  no ssn 3 step" path="com.frolova.features"/>
+  <tags>
+    <tag name="A4  no ssn 3 step" type="story"/>
+    <tag name="A4 no ssn 3 step" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="3859">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="5747">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="105">
+    <description>Clear admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="6544">
+    <description>Open site</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1465">
+    <description>Fill first a4 step</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1143">
+    <description>Fill twot a4 step</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="7868">
+    <description>Fill threet a4 step</description>
+  </test-step>
+</acceptance-test-run>

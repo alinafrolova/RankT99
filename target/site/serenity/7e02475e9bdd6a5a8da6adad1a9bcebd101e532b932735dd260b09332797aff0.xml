@@ -1,0 +1,18 @@
+<acceptance-test-run title="Work with campaign" name="work_with_campaign" steps="3" successful="1" failures="1" skipped="1" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="6653" timestamp="2015-06-13T13:06:14.053+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="3039">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{ }&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="FAILURE" duration="3">
+    <description>Click main btn join</description>
+    <error>org.junit.ComparisonFailure: expected:&lt;J[OIN]&gt; but was:&lt;J[oin]&gt;</error>
+    <exception>net.thucydides.core.webdriver.WebdriverAssertionError:org.junit.ComparisonFailure: expected:&lt;J[OIN]&gt; but was:&lt;J[oin]&gt;&#xd;
+[com.frolova.features.DefaultStory.work_with_campaign(DefaultStory.java:29)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="2">
+    <description>Fill default step</description>
+  </test-step>
+</acceptance-test-run>

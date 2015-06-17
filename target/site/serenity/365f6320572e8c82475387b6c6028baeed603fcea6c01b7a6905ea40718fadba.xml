@@ -1,0 +1,23 @@
+<acceptance-test-run title="Work with campaign" name="work_with_campaign" steps="2" successful="1" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="3555" timestamp="2015-05-13T15:12:52.736+03:00">
+  <user-story id="com.frolova.features.CampaignStory" name="Campaign story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Campaign story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="3476">
+    <description>Open site</description>
+  </test-step>
+  <test-step result="ERROR" duration="52">
+    <description>Fill first step</description>
+    <error>Timed out after 2 seconds. Element could not be loaded
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown</error>
+    <exception>org.openqa.selenium.NoSuchElementException:Timed out after 2 seconds. Element could not be loaded
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown&#xd;
+[com.frolova.features.CampaignStory.work_with_campaign(CampaignStory.java:49)]</exception>
+  </test-step>
+</acceptance-test-run>

@@ -1,0 +1,20 @@
+<acceptance-test-run title="Work with admin" name="work_with_admin" steps="2" successful="2" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="2538" timestamp="2015-05-13T15:16:27.516+03:00">
+  <user-story id="com.frolova.features.AdminStory" name="Admin story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Admin story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="1767">
+    <screenshots>
+      <screenshot image="2969da67fffad7d7135e22313ab3b740_NONE.png"/>
+      <screenshot image="64f2cb6a4a88f4f283543efafe958c37_NONE.png"/>
+    </screenshots>
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="756">
+    <screenshots>
+      <screenshot image="9419162b82a531f0f7bf00cf43522f7f_NONE.png"/>
+      <screenshot image="3268638fde4c1462d5f320730102e9aa_NONE.png"/>
+    </screenshots>
+    <description>Clear admin</description>
+  </test-step>
+</acceptance-test-run>
