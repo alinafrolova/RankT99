@@ -1,0 +1,15 @@
+<acceptance-test-run title="Work with campaign poker popup click" name="work_with_campaign_poker_popup_click" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="43844" timestamp="2015-06-17T17:45:40.651+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="14364">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{}&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="1400">
+    <description>Pop upfill prereg WN step</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="28008">
+    <description>Fill default step</description>
+  </test-step>
+</acceptance-test-run>

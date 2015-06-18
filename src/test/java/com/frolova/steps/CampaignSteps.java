@@ -50,6 +50,13 @@ public class CampaignSteps extends ScenarioSteps {
         campaignPages.deleteAllCookies();
         campaignPages.addCookies();
         campaignPages.click_button_join();
+
+    } ///////////////////////////////////////////////////////////
+    public void click_main_main_btn_join(){
+        campaignPages.deleteAllCookies();
+        campaignPages.addCookies();
+        campaignPages.click_button_main_join();
+
     }
     ///////////////////////////////////////////////////////////
     public void click_live_banner_join(){
@@ -124,10 +131,52 @@ public class CampaignSteps extends ScenarioSteps {
     }
     ///////////////////////////////////////////////////////////
     @Step
-    public void fillDefaultStep(){
+    public void fillPreregWNStep(){
         log.info("Это информационное сообщение!");
-       campaignPages.choose_new_login();
-       campaignPages.btn_continue();
+        campaignPages.choose_new_login();
+        campaignPages.btn_continue_WN();
+
+    }
+    ///////////////////////////////////////////////////////////
+    @Step
+    public void fillPreregWEStep(){
+        log.info("Это информационное сообщение!");
+        campaignPages.choose_club_login();
+        campaignPages.fill_membership("1430184883");
+        campaignPages.click_pre_day_b("1");
+        campaignPages.click_pre_mon_b("01 - January");
+        campaignPages.click_pre_year_b("1991");
+        campaignPages.btn_continue_WE();
+
+    }
+    ///////////////////////////////////////////////////////////
+    @Step
+    public void PopUpfillPreregWNStep(){
+        log.info("Это информационное сообщение!");
+        //delete cookies T66
+        campaignPages.deleteAllCookies();
+        campaignPages.addCookies();
+        campaignPages.deleteT66Cookies();
+        campaignPages.choose_new_login_popup();
+
+    }
+    ///////////////////////////////////////////////////////////
+    @Step
+    public void PopUpfillPreregWEStep(){
+        log.info("Это информационное сообщение!");
+        campaignPages.deleteAllCookies();
+        campaignPages.addCookies();
+        campaignPages.deleteT66Cookies();
+        campaignPages.choose_club_login_popup();
+        campaignPages.fill_membership("1430184883");
+        campaignPages.click_pre_day_b("1");
+        campaignPages.click_pre_mon_b("1-January");
+        campaignPages.click_pre_year_b("1991");
+    }
+    ///////////////////////////////////////////////////////////
+    @Step
+    public void fillDefaultStep(){
+
        campaignPages.title("Mr");
         campaignPages.firstname(name);
         campaignPages.lastname(name);

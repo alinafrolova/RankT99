@@ -1,0 +1,24 @@
+<acceptance-test-run title="Work with campaign poker click banner WE" name="work_with_campaign_poker_click_bannerWE" steps="3" successful="2" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="105511" timestamp="2015-06-18T10:59:37.154+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="8697">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{/Poker}&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="31395">
+    <description>Fill prereg WE step</description>
+  </test-step>
+  <test-step result="ERROR" duration="60090">
+    <description>Fill default step</description>
+    <error>Expected enabled element was not enabled
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown</error>
+    <exception>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException:Expected enabled element was not enabled
+Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a6c4449dc285928ba024779344f5423c58&apos;, time: &apos;2014-03-27 11:29:39&apos;
+System info: host: &apos;Frolova-PC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+Driver info: driver.version: unknown&#xd;
+[com.frolova.features.DefaultStory.work_with_campaign_poker_click_bannerWE(DefaultStory.java:129)]</exception>
+  </test-step>
+</acceptance-test-run>

@@ -1,0 +1,15 @@
+<acceptance-test-run title="Work with campaign poker click link WE" name="work_with_campaign_poker_click_linkWE" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="24107" timestamp="2015-06-18T11:06:29.505+03:00">
+  <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
+  <tags>
+    <tag name="Default story" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="2197">
+    <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{/Poker}&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="3507">
+    <description>Fill prereg WE step</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="14974">
+    <description>Fill default step</description>
+  </test-step>
+</acceptance-test-run>

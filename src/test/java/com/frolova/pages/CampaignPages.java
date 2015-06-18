@@ -10,7 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.Set;
@@ -26,7 +25,7 @@ import static org.junit.Assert.assertFalse;
 //@DefaultUrl("https://registration.grosvenorcasinos.com/WN/P1/Details/2?t=DBEA48EFB96D4A4F8BA96DE7F8")
 @NamedUrls(
         {
-                @NamedUrl(name = "chanel", url = "http://www.grosvenorcasinos.com/{1}")
+                @NamedUrl(name = "chanel", url = "http://www.grosvenorcasinos.com{1}")
 
         }
 )
@@ -44,6 +43,12 @@ public class CampaignPages extends PageObject {
     //////////////////////////////////
     @FindBy(id = "newlogin")
     private WebElementFacade checkbox_newlogin;
+    //////////////////////////////////popup
+    @FindBy(css = "a.get-my-details-bonus")
+    private WebElementFacade popup_clublogin;
+    //////////////////////////////////
+    @FindBy(css = "a.join-now-no-bonus")
+    private WebElementFacade popup_newlogin;
     //////////////////////////////////
     @FindBy(id = "ClubIdentifier")
     private WebElementFacade membership_field;
@@ -51,14 +56,12 @@ public class CampaignPages extends PageObject {
     @FindBy(id = "PreRegDOBDay")
     private WebElementFacade pre_day_b;
     //////////////////////////////////
-    @FindBy(id = "PreRegDOBDay")
-    private Select pre_reg_day_b;
-    //////////////////////////////////
+
     @FindBy(id = "PreRegDOBMonth")
-    private  Select pre_reg_mon_b;
+    private  WebElementFacade pre_reg_mon_b;
     //////////////////////////////////
     @FindBy(id = "PreRegDOBYear")
-    private Select pre_reg_year_b;
+    private WebElementFacade pre_reg_year_b;
     //////////////////////////////////
     @FindBy(id = "FullName_Prefix")
     private WebElementFacade title_select;
@@ -146,7 +149,10 @@ public class CampaignPages extends PageObject {
     private WebElementFacade button_continue;
     /////////////////////////////////
     @FindBy(id = "mm-next-step")
-    private WebElementFacade btn_continue;
+    private WebElementFacade btn_continue_WN;
+    /////////////////////////////////
+    @FindBy(css ="div.existing-customer-links > #mm-next-step")
+    private WebElementFacade btn_continue_WE;
     /////////////////////////////////
     @FindBy(id = "submit1")
     private WebElementFacade submit;
@@ -176,6 +182,8 @@ public class CampaignPages extends PageObject {
     /////////////////////////////////
     Cookie mmcore = new Cookie("mmcore.opc.enabled", "1");
     Cookie cfgid = new Cookie("mmcore.cfgid", "1");
+    Cookie mm_t66_counter = new Cookie("mm-t66-counter", "1");
+    Cookie mm_t66_generated = new Cookie("mm-t66-generated", "true");
     private String CurrURL;
     private String DefURL;
 
@@ -184,7 +192,13 @@ public class CampaignPages extends PageObject {
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void deleteAllCookies() {
         getDriver().manage().deleteAllCookies();
-        getDriver().navigate().refresh();
+
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void deleteT66Cookies() {
+        getDriver().manage().deleteCookie(mm_t66_counter);
+        getDriver().manage().deleteCookie(mm_t66_generated);
+
     }
     /////////////////////////////////////////////////////////////////////////////////////////////
     public void addCookies(){
@@ -192,7 +206,7 @@ public class CampaignPages extends PageObject {
         getDriver().manage().addCookie(mmcore);
         System.out.println("enabled");
         getDriver().manage().addCookie(cfgid);
-        getDriver().navigate().refresh();
+
 
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -226,11 +240,24 @@ public class CampaignPages extends PageObject {
     public void click_button_join(){
 
       main_join_btn.isPresent();
+        getDriver().navigate().refresh();
       String btn_join = main_join_btn.getText();
         System.out.println(btn_join);
       getDriver().navigate().refresh();
       assertEquals(btn_join, "Join");
       main_join_btn.click();
+
+    }
+    public void click_button_main_join(){
+
+        main_join_btn.isPresent();
+        getDriver().navigate().refresh();
+        String btn_join = main_join_btn.getText();
+        System.out.println(btn_join);
+        getDriver().navigate().refresh();
+        assertEquals(btn_join, "JOIN");
+        main_join_btn.click();
+
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void click_live_banner_join(){
@@ -340,6 +367,24 @@ public class CampaignPages extends PageObject {
         checkbox_clublogin.isPresent();
         checkbox_clublogin.click();
     }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void choose_new_login_popup(){
+
+            popup_newlogin.isPresent();
+            popup_newlogin.click();
+
+
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void choose_club_login_popup(){
+        String chc_newl = getDriver().findElement(By.cssSelector("h2")).getText();
+        System.out.println(chc_newl);
+        assertEquals(chc_newl, "CASINO MEMBERS GET £40!");
+        popup_clublogin.isPresent();
+        popup_clublogin.click();
+
+    }
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void see_frame(){
 
@@ -358,13 +403,13 @@ public class CampaignPages extends PageObject {
             e.printStackTrace();
         }
         getDriver().switchTo().frame("mm_t99_reg_frame");
-        wait_continue= btn_continue.isDisplayed();
+        wait_continue= btn_continue_WN.isDisplayed();
         getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         try {
             Thread.sleep(3000);
             while (wait_continue=false)
             {
-                wait_continue= btn_continue.isDisplayed();
+                wait_continue= btn_continue_WN.isDisplayed();
                 System.out.println(wait_continue);
             }
         } catch (InterruptedException e) {
@@ -382,71 +427,90 @@ public class CampaignPages extends PageObject {
     public void fill_membership(String membership){
         membership_field.isPresent();
         boolean  actual;
-        actual = membership_field.containsText("");
-        assertFalse(actual);
+
+//        actual = membership_field.containsText("");
+//        assertFalse(actual);
         membership_field.clear();
         membership_field.sendKeys(membership);
         actual = membership_field.containsText(membership);
         assertFalse(actual);
     }
-    ///////////////////////////////////////////////////////////////////////////////////////////select
-    public void select_pre_day_b(){
-        pre_reg_day_b.selectByVisibleText("1");
-        WebElementFacade first_field = (WebElementFacade) pre_reg_day_b.getFirstSelectedOption();
-    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////
-    public void click_pre_day_b(){
+    public void click_pre_day_b(String day){
         pre_day_b.isPresent();
         pre_day_b.click();
         pre_day_b.isSelected();
-        pre_day_b.selectByVisibleText("1");
+        pre_day_b.selectByVisibleText(day);
 
     }
-    ///////////////////////////////////////////////////////////////////////////////////////////select
-    public void select_pre_mon_b(){
-        pre_reg_mon_b.selectByVisibleText("01 - January");
-        WebElementFacade first_field = (WebElementFacade) pre_reg_mon_b.getFirstSelectedOption();
-    }
-    ///////////////////////////////////////////////////////////////////////////////////////////select
-    public void select_pre_year_b(){
-        pre_reg_year_b.selectByVisibleText("01 - January");
-        WebElementFacade first_field = (WebElementFacade) pre_reg_year_b.getFirstSelectedOption();
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void click_pre_mon_b(String mon){
+        pre_reg_mon_b.isPresent();
+        pre_reg_mon_b.click();
+        pre_reg_mon_b.isSelected();
+        pre_reg_mon_b.selectByVisibleText(mon);
+
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
-    public void btn_continue(){
+    public void click_pre_year_b(String year){
+        pre_reg_year_b.isPresent();
+        pre_reg_year_b.click();
+        pre_reg_year_b.isSelected();
+        pre_reg_year_b.selectByVisibleText(year);
+        pre_reg_year_b.click();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void btn_continue_WN(){
         boolean wait_submit;
-        wait_submit= btn_continue.isPresent();
+        wait_submit= btn_continue_WN.isPresent();
         getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        waitFor(btn_continue);
-        btn_continue.isPresent();
-        btn_continue.click();
+        btn_continue_WN.isPresent();
+        btn_continue_WN.click();
         waitForWithRefresh();
         withTimeoutOf(5, TimeUnit.SECONDS).elementIsDisplayed(By.tagName("h2"));
 
         while (wait_submit=false)
         {
-            wait_submit= btn_continue.isDisplayed();
+            wait_submit= btn_continue_WN.isDisplayed();
+            System.out.println(wait_submit);
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void btn_continue_WE(){
+        boolean wait_submit;
+        wait_submit= btn_continue_WE.isPresent();
+        getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        btn_continue_WE.isPresent();
+        btn_continue_WE.click();
+        waitForWithRefresh();
+        withTimeoutOf(5, TimeUnit.SECONDS).elementIsDisplayed(By.tagName("h2"));
+
+        while (wait_submit=false)
+        {
+            wait_submit= btn_continue_WE.isDisplayed();
             System.out.println(wait_submit);
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void btn_continue_a2(){
         boolean wait_submit;
-        wait_submit= btn_continue.isPresent();
+        wait_submit= btn_continue_WN.isPresent();
         getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         try {
             Thread.sleep(3000);
             while (wait_submit=false)
             {
-                wait_submit= btn_continue.isDisplayed();
+                wait_submit= btn_continue_WN.isDisplayed();
                 System.out.println(wait_submit);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        btn_continue.isPresent();
-        btn_continue.click();
+        btn_continue_WN.isPresent();
+        btn_continue_WN.click();
         waitForWithRefresh();
         withTimeoutOf(5, TimeUnit.SECONDS).elementIsDisplayed(By.tagName("h2"));
 
