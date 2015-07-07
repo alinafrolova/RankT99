@@ -18,7 +18,7 @@ public class AdminSteps extends ScenarioSteps {
     @Step
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void loginAdmin(){
-        adminPages.enterLoginPass("alina.frolova@maxymiser.com","Vfybyuty01011990z");
+        adminPages.enterLoginPass("");
         adminPages.logInSubmit();
 //        adminPages.choose_configuration_action_log();
     }
