@@ -1,6 +1,5 @@
 package com.frolova.steps;
 
-import com.frolova.addition.Mmdriver;
 import com.frolova.addition.Temp;
 import com.frolova.pages.CampaignPages;
 import net.thucydides.core.annotations.Step;
@@ -19,11 +18,11 @@ import static org.junit.Assert.assertThat;
  */
 public class CampaignSteps extends ScenarioSteps {
     CampaignPages campaignPages;
-    Mmdriver mmdriver;
+    Temp temp;
     ///////////////////////////////////////////////////////////
-    String name = "MM" + Temp.randomtxt(4)+"TATP";
-    String username = "MM" +  Temp.randomtxt(4)+"TATP";
-    String mail = "MM" + Temp.randomtxt(4) +new Random().nextInt(999)+ "@maxymiser.com";
+    String name = "MMrankw" + Temp.randomtxt(4)+"TATP";
+    String username = "MMrankw" +  Temp.randomtxt(4)+"TATP";
+    String mail = "MMrankw" + Temp.randomtxt(4) +new Random().nextInt(999)+ "@maxymiser.com";
     String ph = "85895758"+ new Random().nextInt(999);
     private Cookie mmcore;
     private static final org.apache.log4j.Logger log = Logger.getLogger(CampaignSteps.class);
@@ -40,9 +39,10 @@ public class CampaignSteps extends ScenarioSteps {
     }
 
     ///////////////////////////////////////////////////////////
-    public void openTest( String[] url){
+    public void openTest( ){
         getDriver().manage().window().maximize();
-        campaignPages.open("chanel", url);
+        campaignPages.open();
+
     }
 
     ///////////////////////////////////////////////////////////
@@ -132,6 +132,7 @@ public class CampaignSteps extends ScenarioSteps {
     ///////////////////////////////////////////////////////////
     @Step
     public void fillPreregWNStep(){
+        campaignPages.addCookies();
         log.info("Это информационное сообщение!");
         campaignPages.choose_new_login();
         campaignPages.btn_continue_WN();
@@ -176,7 +177,8 @@ public class CampaignSteps extends ScenarioSteps {
     ///////////////////////////////////////////////////////////
     @Step
     public void fillDefaultStep(){
-
+        System.out.println("create file");
+        temp.writeToFile("username.txt",name);
        campaignPages.title("Mr");
         campaignPages.firstname(name);
         campaignPages.lastname(name);
@@ -197,6 +199,8 @@ public class CampaignSteps extends ScenarioSteps {
     @Step
     public void fillA2Step(){
         log.info("Это информационное сообщение!");
+        System.out.println("create file");
+        temp.writeToFile("username.txt",name);
         campaignPages.see_frame();
         campaignPages.choose_new_login();
         campaignPages.btn_continue_a2();
@@ -217,7 +221,7 @@ public class CampaignSteps extends ScenarioSteps {
 
     }
     @Step
-    public void should_see_title_page(String text,String resultsTitle) {
+    public void should_see_name(String text,String resultsTitle) {
         assertThat(campaignPages.getTitleRegPage(), hasItem(containsString(resultsTitle)));
 
     }

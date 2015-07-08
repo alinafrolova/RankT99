@@ -25,7 +25,7 @@ import static org.junit.Assert.assertFalse;
 //@DefaultUrl("https://registration.grosvenorcasinos.com/WN/P1/Details/2?t=DBEA48EFB96D4A4F8BA96DE7F8")
 @NamedUrls(
         {
-                @NamedUrl(name = "chanel", url = "http://www.grosvenorcasinos.com{1}")
+                @NamedUrl(name = "chanel", url = "http://www.grosvenorcasinos.com{1}?mmcore.opc.enabled=1")
 
         }
 )
@@ -208,6 +208,7 @@ public class CampaignPages extends PageObject {
         getDriver().manage().addCookie(cfgid);
 
 
+
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
     public void check_cookie(){
@@ -220,9 +221,9 @@ public class CampaignPages extends PageObject {
     }
     /////////////////////////////////////////
     public List<String> getTitleRegPage() {
-        WebElementFacade TitleList = find(By.cssSelector("head"));
+        WebElementFacade TitleList = find(By.id("loggedin"));
         System.out.println(TitleList);
-        List<WebElement> resultsTitle = TitleList.findElements(By.tagName("title"));
+        List<WebElement> resultsTitle = TitleList.findElements(By.tagName("span"));
         System.out.println(resultsTitle);
         return convert(resultsTitle, toStrings());
     }

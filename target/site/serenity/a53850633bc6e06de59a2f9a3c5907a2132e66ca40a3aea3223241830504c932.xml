@@ -1,15 +1,36 @@
-<acceptance-test-run title="Work with campaign main click btn" name="work_with_campaign_main_click_btn" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="28750" timestamp="2015-06-18T11:06:53.618+03:00">
+<acceptance-test-run title="Work with campaign main click btn" name="work_with_campaign_main_click_btn" steps="9" successful="2" failures="0" errors="1" skipped="6" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="22987" timestamp="2015-07-08T13:00:36.709+03:00">
   <user-story id="com.frolova.features.DefaultStory" name="Default story" path="com.frolova.features"/>
   <tags>
     <tag name="Default story" type="story"/>
   </tags>
-  <test-step result="SUCCESS" duration="2658">
+  <test-step result="SUCCESS" duration="6656">
     <description>Open site main: &lt;span class=&apos;step-parameter&apos;&gt;{/}&lt;/span&gt;</description>
   </test-step>
-  <test-step result="SUCCESS" duration="2893">
+  <test-step result="SUCCESS" duration="4904">
     <description>Fill prereg WN step</description>
   </test-step>
-  <test-step result="SUCCESS" duration="17509">
+  <test-step result="ERROR" duration="8">
+    <description>Get action: &lt;span class=&apos;step-parameter&apos;&gt;t99_preregcomplete&lt;/span&gt;</description>
+    <error>Unspecified failure</error>
+    <exception>java.lang.NullPointerException:null&#xd;
+[com.frolova.features.DefaultStory.work_with_campaign_main_click_btn(DefaultStory.java:51)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="16">
     <description>Fill default step</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="12">
+    <description>Open admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="12">
+    <description>Login admin</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="16">
+    <description>Should see definition action: &lt;span class=&apos;step-parameter&apos;&gt;Campaign was generated- , T99_Registration_AB&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Should see definition action: &lt;span class=&apos;step-parameter&apos;&gt;Content was loaded- , a_registr=Default&lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="1">
+    <description>Should see definition action: &lt;span class=&apos;step-parameter&apos;&gt;Action tracked- , t99_preregcomplete&lt;/span&gt;</description>
   </test-step>
 </acceptance-test-run>

@@ -1,6 +1,7 @@
 package com.frolova.features;
 
 import com.frolova.steps.CampaignSteps;
+import com.frolova.steps.LoginSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -20,12 +21,15 @@ public class TestStory {
 
     @Steps
     CampaignSteps campaignSteps;
+    @Steps
+    LoginSteps loginSteps;
 
     @Test
     @WithDriver("chrome")
     public void b_work_with_campaign(){
-
-        campaignSteps.openTest(new String[] {"live-casino"});
+        campaignSteps.openSiteMain(new String[] {"/"});
+        loginSteps.login();
+        campaignSteps.should_see_name("username"," ");
 
 
     }

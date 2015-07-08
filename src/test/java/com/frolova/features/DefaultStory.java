@@ -1,5 +1,6 @@
 package com.frolova.features;
 
+import com.frolova.steps.AdminSteps;
 import com.frolova.steps.CampaignSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
@@ -18,6 +19,17 @@ public class DefaultStory {
     @Managed(uniqueSession = true)
     public WebDriver webdriver;
 
+    @Steps
+    AdminSteps adminSteps;
+//    @Before
+//    // @WithDriver("chrome")
+//    public void a_work_with_admin(){
+//
+//        adminSteps.openAdmin();
+//        adminSteps.loginAdmin();
+//        adminSteps.clearAdmin();
+//
+//    }
 
     @Steps
     CampaignSteps campaignSteps;
@@ -28,15 +40,22 @@ public class DefaultStory {
         campaignSteps.PopUpfillPreregWNStep();
         campaignSteps.fillDefaultStep();
 
+
     }
+    ///There are use mmdriver (adminSteps.get_action("t99_preregcomplete");)
     @Test
     @WithDriver("chrome")
     public void work_with_campaign_main_click_btn(){
         campaignSteps.openSiteMain(new String[] {"/"});
         campaignSteps.click_main_main_btn_join();
         campaignSteps.fillPreregWNStep();
+        adminSteps.get_action("t99_preregcomplete");
         campaignSteps.fillDefaultStep();
-
+        adminSteps.openAdmin();
+        adminSteps.loginAdmin();
+        adminSteps.should_see_definition_action("Campaign was generated- ","T99_Registration_AB");
+        adminSteps.should_see_definition_action("Content was loaded- ","a_registr=Default");
+        adminSteps.should_see_definition_action("Action tracked- ","t99_preregcomplete");
     }
     @Test
     @WithDriver("chrome")
