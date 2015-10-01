@@ -17,7 +17,7 @@ import static ch.lambdaj.Lambda.convert;
  * Created by Frolova.A on 4/28/15.
  */
 
-@DefaultUrl("https://ui61.maxymiser.com/Admin/account-rank-interactive/447/site-grosvenorcasinos-com/267/ActionLog")
+@DefaultUrl("")
 
 public class AdminPages extends PageObject {
     private WebDriver driver;
@@ -137,13 +137,13 @@ public class AdminPages extends PageObject {
     }
     /////////////////////////////////////////////////////////////////////////////////////////////
     public void openActionLog() {
-        getDriver().get("https://ui61.maxymiser.com/Admin/account-rank-interactive/447/site-grosvenorcasinos-com/267/ActionLog/AjaxLoadGrid?configType=Sandbox&ipCategory=OWN_IP&_");
+        getDriver().get("");
 
     }
     /////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
     public void openWeights() {
-        getDriver().get("https://ui61.maxymiser.com/CampaignBuilder/site-grosvenorcasinos-com/267/campaign-t99-registration-ab/17119/CampaignContent");
+        getDriver().get("");
     }
     /////////////////////////////////////////////////////////////////////////////////////////////
     public void closeDriver(){
